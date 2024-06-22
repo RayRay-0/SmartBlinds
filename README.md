@@ -31,6 +31,7 @@ To put together the blinds you'll need the following components:
 
 ## Circuit Diagram
 ![circuit](https://github.com/RayRay-0/SmartBlinds/assets/123088926/b5782d13-9438-4bed-a0e3-d7281332977c)
+
 The circuit diagram illustrates the connections between the components.
 
 ## Code Explanation
@@ -58,5 +59,31 @@ The circuit diagram illustrates the connections between the components.
 The blinds will probably need adjusting, so here's how to test which variables need to be looked for and edited:
 1. Mount the blinds and run the code
      - If the blinds don't go in the correct direction, you'll need to change the CW and CCW direction of the up() and down() methods accordingly. (moving the minus (-) from one method to the other until the desired results are met)
-2. Count how many times the wheel turns every 1000 (or 10,000 steps if the blinds are longer) and change the number the 1000 is multiplied by to the one you counted.
-     - This is done to ensure that the blinds turn in one go and don't have to b
+2. Count how many times the wheel turns every 1000 steps (or 10,000 steps if the blinds are longer) and change the number the 1000 is multiplied by to the one you counted.
+     - This is done to ensure that the blinds turn in one smooth go and don't have to constantly stop. Also to reduce the noise produced by the project.
+
+If you encounter issues like the blinds not turning or turning in the wrong direction/at the wrong time:
+1. Check if the chain is being obstructed by anything. There shouldn't be anything in the way of the chain to turn or inside the wheel or the chain.
+2. Check if the chain is fully extended. If the chain is too loose, it'll slip off the motor and therefore not turn.
+3. Review the code. There's a chance that there's been a syntax error. The first time is never the charm.
+
+## Safery Considerations
+While putting together the project make sure your environment is clean.
+Works with caution while handling electrical components
+Disconnect the circuit from the power source before making any changes
+
+## Conclusion and Future Improvements
+The SmartBlinds are an efficient way for regular people, or those with disabilities, to be able to have some privacy without having to worry about constantly going near their windows. They showcase how easily mundane tasks can be automated and one less luxury without the worry about it. 
+
+Possible future improvments for the project:
+ - Adding a solar panel so the blinds don't have to rely on the battery
+ - Implementing a wireless connection with an app for remote control of the blinds
+ - A faster turning motor to cut the time it takes for the blinds to fully lower and rise.
+
+# Who even thought of making this
+
+The best duo team "2 chasa sun" (2-hour sleep)
+Dilyara Hristova - purviq chas sun
+Raya Ivanova - vtoriq chas sun 
+(equally as important)
+![logo](https://github.com/RayRay-0/SmartBlinds/assets/123088926/70f7f021-b322-43c7-8838-bfa1b4ab4d0a)
