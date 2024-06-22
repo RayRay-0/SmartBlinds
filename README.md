@@ -1,1 +1,2 @@
 # SmartBlinds
+## Introduction
