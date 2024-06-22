@@ -30,4 +30,19 @@ To put together the blinds you'll need the following components:
  2. Stepper library (included in Arduino IDE)
 
 ## Circuit Diagram
+![circuit](https://github.com/RayRay-0/SmartBlinds/assets/123088926/b5782d13-9438-4bed-a0e3-d7281332977c)
+The circuit diagram illustrates the connections between the components.
 
+## Code Explanation
+1. The project uses the Stepper library for the clockwise and counter-clockwise movement of the stepper so the blinds can turn
+2. We define when it's dark and when it's light
+3. And then we define two states, the previous state and current state of the light for the blinds. The default setting has it set to LIGHT.
+4. We create two constant int's - one for the steps per revolution for the Stepper, and another for the steps per full rotation. The steps per full rotation are 1000 steps multiplied by however many times it takes for the stepper to turn until the blinds have gone from fully extended to fully rolled up. In our case, it took 17 turns of 1000 steps.
+5. We select the node the photoresistor is on and make a number variable for the value of the light level.
+6. We set up the stepper with the inputs accordingly. In our case, our inputs were IN1->8, IN2->9, IN3->10, IN4->11.
+7. In the setup() we've added a begin and an input at the photoresistor.
+8. The methods up() and down() have the speed at which the stepper motor should turn and whether it's turning clockwise or counterclockwise according to how they're mounted to the window.
+9. In the loop() secion of our code, we've made the Serial Monitor print the light level, previous and current state of the blinds.
+10. The delay in the end is as big as it is so that we can avoid the blinds constantly turning whenever there's lighting.
+
+## Step-by-Step Assembling
