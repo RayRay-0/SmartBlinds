@@ -46,3 +46,17 @@ The circuit diagram illustrates the connections between the components.
 10. The delay in the end is as big as it is so that we can avoid the blinds constantly turning whenever there's lighting.
 
 ## Step-by-Step Assembling
+1. Connect the Stepper motor to the Arduino Uno board accordingly
+2. Assemble the other components on the breadboard and connect accordingly
+3. Attach the chain of the blinds to the motor (or 3D printed part attached to the motor)
+4. Make sure the chain is fully extended for the most optimal results
+5. Put the light sensor/photoresistor somewhere where it can capture the light outside without any obstacles in the way.
+6. Upload the code to the Arduino Uno board using Arduino IDE
+7. Power the system and adjust the blinds acccordingly.
+
+## Testing and Troubleshooting
+The blinds will probably need adjusting, so here's how to test which variables need to be looked for and edited:
+1. Mount the blinds and run the code
+     - If the blinds don't go in the correct direction, you'll need to change the CW and CCW direction of the up() and down() methods accordingly. (moving the minus (-) from one method to the other until the desired results are met)
+2. Count how many times the wheel turns every 1000 (or 10,000 steps if the blinds are longer) and change the number the 1000 is multiplied by to the one you counted.
+     - This is done to ensure that the blinds turn in one go and don't have to b
